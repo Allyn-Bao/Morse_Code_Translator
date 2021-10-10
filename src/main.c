@@ -8,7 +8,8 @@
 // To run a particular example, you should remove the comment (//) in
 // front of exactly ONE of the following lines:
 
-#define BUTTON_BLINK
+// #define BUTTON_BLINK
+#define LIGHT_WHEN_PRESSED
 // #define LIGHT_SCHEDULER
 // #define TIME_RAND
 // #define KEYPAD
@@ -64,6 +65,131 @@ int main(void)
     {
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
         HAL_Delay(250);  // 250 milliseconds == 1/4 second
+    }
+#endif
+
+#ifdef LIGHT_WHEN_PRESSED
+    // LED lights when the button is pressed, and turn off when LED is off
+
+    // time counter
+    const uint32_t short_press = 400;
+    const uint32_t long_press = 800;
+    const uint32_t short_gap = 1000;
+    const uint32_t long_gap = 3000;
+
+    // const unsigned int correct_pattern_length = 5;
+    // int correct_pattern[correct_pattern_length];
+
+    const int max_intervals = 5;
+    bool exceed_limit = false;
+    int intervals[max_intervals]; // value 1 == short press; value 2 == long press;
+    unsigned int cur_interval = 0;
+
+    uint32_t time_button_pressed;
+    uint32_t time_button_released;
+    uint32_t cur_button_down_length;
+
+    uint32_t cur_press_to_short_press;
+    uint32_t cur_press_to_long_press;
+
+    uint32_t time_gap_start = HAL_GetTick();;
+    uint32_t time_gap_end;
+    uint32_t cur_gap_length;
+
+    uint32_t cur_gap_to_short_gap;
+    uint32_t cur_gap_to_long_gap;
+
+    // uint32_t correct_prompt_start;
+    // uint32_t correct_prompt_length = 5000;
+
+    // loop
+    while ( true )
+    {
+        // wait for button press
+        while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+        {
+        }
+        // record time button is pressed
+        time_button_pressed = HAL_GetTick();
+
+        // record time when gap ends
+        time_gap_end = time_button_pressed;
+
+        // calculate gap length
+        cur_gap_length = time_gap_end - time_gap_start;
+
+        // calculate the closeness of gap length to a short_gap and long_gap
+        // closeness to short gap
+        if (cur_gap_length >= short_gap) {cur_gap_to_short_gap = cur_gap_length - short_gap;}
+        else {cur_gap_to_short_gap = short_gap - cur_gap_length;}
+        //closeness to long gap
+        if (cur_gap_length >= long_gap) {cur_gap_to_long_gap = cur_gap_length - long_gap;}
+        else {cur_gap_to_long_gap = long_gap - cur_gap_length;}
+        
+        // check if gap length is closer to a long pause OR inputs exceeds limit: - if long pause / exceeds limit -> the current set of input is finished -> clear intervals[]
+        if ( exceed_limit || cur_gap_length > long_gap || cur_gap_to_short_gap > cur_gap_to_long_gap ) {
+            // check match
+            /*
+            bool is_correct = true;
+            if (cur_interval != correct_pattern_length) {is_correct = false;}
+            for ( unsigned int i{0}; i < cur_interval; i++ ){
+                if ( intervals[i] != correct_pattern[i] ) {
+                    is_correct = false;
+                }
+            }
+            if (is_correct) {
+                correct_prompt_start = HAL_GetTick();
+                while (true) // loop forever, blinking the LED
+                {
+                    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+                    HAL_Delay(250);  // 250 milliseconds == 1/4 second
+                    if ( HAL_GetTick() - correct_prompt_start >= correct_prompt_length) {
+                        break;
+                    }
+                }
+            }
+            */
+            // reset intervals[] all elements to 0
+            cur_interval = 0;
+        }
+
+        // wait for button to release
+        while (!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+        {
+            HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, true);   // turn on LED
+        }
+        // record time button is released
+        time_button_released = HAL_GetTick();
+
+        // record time when gap starts
+        time_gap_start = time_button_released;
+
+        // calculated the length of time the button was pressed in current interval
+        cur_button_down_length = time_button_released - time_button_pressed;
+
+        // calculate the closeness of button pressed time length to a short_press and long_press
+        // closeness to short press
+        if (cur_button_down_length >= short_press) {cur_press_to_short_press = cur_button_down_length - short_press;}
+        else {cur_press_to_short_press = short_press - cur_button_down_length;}
+        //closeness to long press
+        if (cur_button_down_length >= long_press) {cur_press_to_long_press = cur_button_down_length - long_press;}
+        else {cur_press_to_long_press = long_press - cur_button_down_length;}
+        
+        // check if the button pressed was a short press or long press
+        // if the length of time is closing to a short press OR length of time is less than a short press
+        if ( cur_button_down_length <= short_press || cur_press_to_short_press <= cur_press_to_long_press ) {
+            intervals[cur_interval] = 1; // short press
+            SerialPutc('.');
+        } else {
+            intervals[cur_interval] = 2; // long press
+            SerialPutc('_');
+        }
+        cur_interval++;
+        
+        // check if interval exceeds limit
+        if ( cur_interval >= max_intervals ) {exceed_limit = true;}
+
+        HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, false);  // turn off LED
     }
 #endif
 
