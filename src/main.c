@@ -1,15 +1,12 @@
-// Sample code for ECE 198
+// Morse Code Machine
+// project for ECE 198
+// Group 158
 
-// Written by Bernie Roehl, August 2021
-
-// This file contains code for a number of different examples.
-// Each one is surrounded by an #ifdef ... #endif block inside of main().
-
-// To run a particular example, you should remove the comment (//) in
-// front of exactly ONE of the following lines:
+// Written by Allyn Bao, October 2021 
+// Based on template provided by Bernie Roehl, August 2021
 
 // #define BUTTON_BLINK
-#define LIGHT_WHEN_PRESSED
+#define MORSE_CODE
 // #define LIGHT_SCHEDULER
 // #define TIME_RAND
 // #define KEYPAD
@@ -26,6 +23,59 @@
 #include <stdlib.h>  // srand() and random() functions
 
 #include "ece198.h"
+
+// functions
+uint32_t time_difference( uint32_t x, uint32_t y ) { 
+    // calculate the difference between two uint32_t (time)
+    if (x >= y) { return x - y; }
+    else { return y - x; }
+    }
+
+
+int power( int base, int power ) {
+    if ( power == 0 ) { return 1; }
+    int result = base;
+    for ( unsigned int i=2; i <= power; i++ ) {
+        result *= base;
+    }
+    return result;
+}
+
+
+void reset_intervals_array( int intervals[], const unsigned int MAX_INTERVALS ) {
+    for (unsigned int i=0; i<MAX_INTERVALS; i++ ) {
+        intervals[i] = 0;
+    }
+}
+
+
+char check_match( int intervals[], int cur_interval, const char CHARACTORS[], const int MORSE_CODE_INT[], const unsigned int NUM_CHARS) {
+    
+    int code_int = 0;
+    for ( int i=0; i <cur_interval ; i++ ) {
+        code_int += intervals[i] * power(10, (cur_interval-1) - i);
+    }
+    // debug print(code_int)
+    /*
+    char buff[5];
+    sprintf(buff, " %d ", code_int);
+    SerialPuts(buff);
+    */
+    
+    for ( unsigned int j=0; j < NUM_CHARS; j++ ) {
+        if ( code_int == MORSE_CODE_INT[j] ) {
+            return CHARACTORS[j];
+
+            // debug print(MORSE_CODE_INT[j])
+            char buff[1];
+            sprintf(buff, " %s ", CHARACTORS[j]);
+            SerialPuts(buff);
+        }
+    }
+    SerialPutc('*');
+    return ' ';
+}
+
 
 int main(void)
 {
@@ -53,37 +103,39 @@ int main(void)
     // as mentioned above, only one of the following code sections will be used
     // (depending on which of the #define statements at the top of this file has been uncommented)
 
-#ifdef BUTTON_BLINK
-    // Wait for the user to push the blue button, then blink the LED.
+#ifdef MORSE_CODE
 
-    // wait for button press (active low)
-    while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
-    {
-    }
+    // Morse code
+    const unsigned int NUM_CHARS = 36;
+    const char CHARACTORS[36] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 
+                            'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 
+                            'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 
+                            'Y', 'Z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'};
+    // short => 1, long => 2; Ex) A => ._ => 12
+    const int MORSE_CODE_INT[36] = {12, 2111, 2121, 211, 1, 1121, 221, 1111, 
+                            11, 1222, 212, 1211, 22, 21, 222, 1221, 
+                            2212, 121, 111, 2, 112, 1112, 122, 2112, 
+                            2122, 2211, 12222, 11222, 11122, 11112, 11111, 21111, 22111, 22211, 22221, 22222};
 
-    while (1) // loop forever, blinking the LED
-    {
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-        HAL_Delay(250);  // 250 milliseconds == 1/4 second
-    }
-#endif
-
-#ifdef LIGHT_WHEN_PRESSED
     // LED lights when the button is pressed, and turn off when LED is off
 
     // time counter
-    const uint32_t short_press = 400;
+    const uint32_t short_press = 250;
     const uint32_t long_press = 800;
-    const uint32_t short_gap = 1000;
-    const uint32_t long_gap = 3000;
+    const uint32_t short_gap = 500;
+    const uint32_t long_gap = 1500;
 
     // const unsigned int correct_pattern_length = 5;
     // int correct_pattern[correct_pattern_length];
 
-    const int max_intervals = 5;
+    const int MAX_INTERVALS = 5;
     bool exceed_limit = false;
-    int intervals[max_intervals]; // value 1 == short press; value 2 == long press;
+    int intervals[MAX_INTERVALS]; // value 1 == short press; value 2 == long press;
     unsigned int cur_interval = 0;
+
+    char cur_char;
+
+    uint32_t cur_time;
 
     uint32_t time_button_pressed;
     uint32_t time_button_released;
@@ -108,50 +160,25 @@ int main(void)
         // wait for button press
         while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
         {
+            cur_time = HAL_GetTick();
+            if (exceed_limit || (cur_interval != 0 && cur_time - time_gap_start > long_gap)) {
+                cur_char = check_match(intervals, cur_interval, CHARACTORS, MORSE_CODE_INT, NUM_CHARS);
+                // debug char
+                SerialPutc(' ');
+                SerialPutc(cur_char);
+                SerialPutc(' ');
+
+                // reset intervals[] all elements to 0
+                cur_interval = 0;
+                reset_intervals_array(intervals, MAX_INTERVALS);
+                exceed_limit = false;
+                }
         }
         // record time button is pressed
         time_button_pressed = HAL_GetTick();
 
         // record time when gap ends
         time_gap_end = time_button_pressed;
-
-        // calculate gap length
-        cur_gap_length = time_gap_end - time_gap_start;
-
-        // calculate the closeness of gap length to a short_gap and long_gap
-        // closeness to short gap
-        if (cur_gap_length >= short_gap) {cur_gap_to_short_gap = cur_gap_length - short_gap;}
-        else {cur_gap_to_short_gap = short_gap - cur_gap_length;}
-        //closeness to long gap
-        if (cur_gap_length >= long_gap) {cur_gap_to_long_gap = cur_gap_length - long_gap;}
-        else {cur_gap_to_long_gap = long_gap - cur_gap_length;}
-        
-        // check if gap length is closer to a long pause OR inputs exceeds limit: - if long pause / exceeds limit -> the current set of input is finished -> clear intervals[]
-        if ( exceed_limit || cur_gap_length > long_gap || cur_gap_to_short_gap > cur_gap_to_long_gap ) {
-            // check match
-            /*
-            bool is_correct = true;
-            if (cur_interval != correct_pattern_length) {is_correct = false;}
-            for ( unsigned int i{0}; i < cur_interval; i++ ){
-                if ( intervals[i] != correct_pattern[i] ) {
-                    is_correct = false;
-                }
-            }
-            if (is_correct) {
-                correct_prompt_start = HAL_GetTick();
-                while (true) // loop forever, blinking the LED
-                {
-                    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
-                    HAL_Delay(250);  // 250 milliseconds == 1/4 second
-                    if ( HAL_GetTick() - correct_prompt_start >= correct_prompt_length) {
-                        break;
-                    }
-                }
-            }
-            */
-            // reset intervals[] all elements to 0
-            cur_interval = 0;
-        }
 
         // wait for button to release
         while (!HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
@@ -166,18 +193,10 @@ int main(void)
 
         // calculated the length of time the button was pressed in current interval
         cur_button_down_length = time_button_released - time_button_pressed;
-
-        // calculate the closeness of button pressed time length to a short_press and long_press
-        // closeness to short press
-        if (cur_button_down_length >= short_press) {cur_press_to_short_press = cur_button_down_length - short_press;}
-        else {cur_press_to_short_press = short_press - cur_button_down_length;}
-        //closeness to long press
-        if (cur_button_down_length >= long_press) {cur_press_to_long_press = cur_button_down_length - long_press;}
-        else {cur_press_to_long_press = long_press - cur_button_down_length;}
         
         // check if the button pressed was a short press or long press
         // if the length of time is closing to a short press OR length of time is less than a short press
-        if ( cur_button_down_length <= short_press || cur_press_to_short_press <= cur_press_to_long_press ) {
+        if ( cur_button_down_length <= short_press) {
             intervals[cur_interval] = 1; // short press
             SerialPutc('.');
         } else {
@@ -187,9 +206,24 @@ int main(void)
         cur_interval++;
         
         // check if interval exceeds limit
-        if ( cur_interval >= max_intervals ) {exceed_limit = true;}
+        if ( cur_interval >= MAX_INTERVALS ) {exceed_limit = true;}
 
         HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, false);  // turn off LED
+    }
+#endif
+
+#ifdef BUTTON_BLINK
+    // Wait for the user to push the blue button, then blink the LED.
+
+    // wait for button press (active low)
+    while (HAL_GPIO_ReadPin(GPIOC, GPIO_PIN_13))
+    {
+    }
+
+    while (1) // loop forever, blinking the LED
+    {
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
+        HAL_Delay(250);  // 250 milliseconds == 1/4 second
     }
 #endif
 
