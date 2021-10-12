@@ -1,0 +1,5 @@
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/CMakeFiles/rebuild_cache.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/CMakeFiles/edit_cache.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/CMakeFiles/Debug.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/CMakeFiles/Production.dir

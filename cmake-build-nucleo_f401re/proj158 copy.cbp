@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="proj158 copy"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET">
+				<Option output="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/include"/>
+					<Add directory="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/DSP/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/STM32F4xx_HAL_Driver/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lsm303dlhc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/l3gd20"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lsm303agr"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/mfxstm32l152"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lis302dl"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q512a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ts3510"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/exc7200"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/cs43l22"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ov2640"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/st7789h2"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/s25fl512s"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ft6x06"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ampire480272"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q128a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/st7735"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/otm8009a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/Common"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/stmpe811"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/wm8994"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/i3g4250d"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lis3dsh"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q256a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/s5k5cag"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/stmpe1600"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ili9341"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ov5640"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ampire640480"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ili9325"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ls016b8uy"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/nt35510"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Adafruit_Shield"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/CPU"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/Log"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/Fonts"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Core/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/VIDEO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/VIDEO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_RNDIS/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_RNDIS/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_ECM/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_ECM/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/BillBoard/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/BillBoard/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Core/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Core/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MTP/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MTP/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Z_DUMMY_TARGET/fast">
+				<Option output="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Z_DUMMY_TARGET" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/include"/>
+					<Add directory="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/DSP/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/CMSIS/Device/ST/STM32F4xx/Include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/STM32F4xx_HAL_Driver/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/STM32F4xx_HAL_Driver/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lsm303dlhc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/l3gd20"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lsm303agr"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/mfxstm32l152"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lis302dl"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q512a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ts3510"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/exc7200"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/cs43l22"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ov2640"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/st7789h2"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/s25fl512s"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ft6x06"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ampire480272"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q128a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/st7735"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/otm8009a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/Common"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/stmpe811"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/wm8994"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/i3g4250d"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/lis3dsh"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/n25q256a"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/s5k5cag"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/stmpe1600"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ili9341"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ov5640"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ampire640480"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ili9325"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/ls016b8uy"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Components/nt35510"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Drivers/BSP/Adafruit_Shield"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/CPU"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/Log"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Utilities/Fonts"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Core/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Core/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/VIDEO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/VIDEO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/DFU/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_RNDIS/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_RNDIS/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_ECM/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CDC_ECM/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/AUDIO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/MSC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/HID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/CustomHID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/BillBoard/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Device_Library/Class/BillBoard/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Core/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Core/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/CDC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/AUDIO/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MSC/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/HID/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/HID/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MTP/Inc"/>
+					<Add directory="/Users/allynbao/.platformio/packages/framework-stm32cubef4/Middlewares/ST/STM32_USB_Host_Library/Class/MTP/Src"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include/c++/7.2.1"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include/c++/7.2.1/arm-none-eabi"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/lib/gcc/arm-none-eabi/7.2.1/include"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/lib/gcc/arm-none-eabi/7.2.1/include-fixed"/>
+					<Add directory="/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/arm-none-eabi/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 Z_DUMMY_TARGET/fast"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Debug">
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 Debug"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Production">
+				<Option working_dir="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 Production"/>
+					<CompileFile command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j16 -f &quot;/Users/allynbao/Library/Mobile\ Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/cmake-build-nucleo_f401re/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src/README.txt">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src/ece198.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src/ece198.h">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/src/main.c">
+			<Option target="Z_DUMMY_TARGET"/>
+		</Unit>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/Morse_Code_Translator/CMakeListsPrivate.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

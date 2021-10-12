@@ -1,0 +1,1 @@
+/Users/allynbao/.platformio/packages/toolchain-gccarmnoneeabi@1.70201.0/bin/arm-none-eabi-gcc -Os -ffunction-sections -fdata-sections -Wall -mthumb -mcpu=cortex-m4 -nostdlib CMakeFiles/Z_DUMMY_TARGET.dir/src/ece198.c.obj CMakeFiles/Z_DUMMY_TARGET.dir/src/main.c.obj -o Z_DUMMY_TARGET 

@@ -1,0 +1,5 @@
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/proj158 copy/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/proj158 copy/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/proj158 copy/cmake-build-debug/CMakeFiles/Z_DUMMY_TARGET.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/proj158 copy/cmake-build-debug/CMakeFiles/Debug.dir
+/Users/allynbao/Library/Mobile Documents/com~apple~CloudDocs/Documents/UWaterloo/ECE198/proj158 copy/cmake-build-debug/CMakeFiles/Production.dir
